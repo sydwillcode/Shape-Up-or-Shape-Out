@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.shape-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+#shape-box{
+    height: 600px;
+    width: 600px;
+    background-color: rgb(194,223,254);
+    position: relative;
+    border: 5px solid blue;
+    contain: paint;
+}
+
+#side-panel{
+    background-color: pink;
+    height: 400px;
+    width: 200px; 
+}
+
+.shape{
+    background-color: red;   
+    position: absolute;
+}
+
+.circle{
+    border-radius: 50%;
+}
+
+.triangle{
+    border-top: 100px solid yellow;
+    border-left: 100px solid transparent;
+}
