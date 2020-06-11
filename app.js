@@ -63,6 +63,7 @@ class Square extends Shape{
         this.div.classList.add('square');
         this.div.style.height = `${sqLength.value}px`;
         this.div.style.width = `${sqLength.value}px`;
+        this.div.style.backgroundColor = 'red';
         container.appendChild(this.div);
     }
 } // end Square class
@@ -83,21 +84,19 @@ circleDiameter(){
 }
 } // end Circle class
 
-// class Triangle extends Shape{
-//     constructor(height){
-//         super (height / 2, height)
-//         this.height = height;
-//         this.div.classList.add('triangle');
-//         this.div.style.height = `${this.trianglePerimeter()}px`;
-//         this.div.style.width = `${this.trianglePerimeter()}px`;
-//         this.div.style.backgroundColor = 'purple';
-//         container.appendChild(this.div);
-//     }
-// trianglePerimeter(){
-//     return (this.height.value * 2) + (this.height.value / 2)
-// }
+class Triangle extends Shape{
+    constructor(height){
+        super ()
+        this.height = height;
+        this.div.classList.add('triangle');
+        //this.div.style.height = `${this.trianglePerimeter()}px`;
+        this.div.style.borderTopWidth = `${this.height}px`;
+        this.div.style.borderRightWidth = `${this.height}px`;
+        container.appendChild(this.div);
+    }
 
-// } // end Triangle class
+
+} // end Triangle class
 
 
 function randomVal(min, max){
